@@ -6,8 +6,43 @@ $font-secondary: 'proxima-nova',sans-serif;
 $red-color: #911D17;
 $bronze-color: #C69F52;
 $black-color-title: #383844;
-button{
+
+@mixin centerContent(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin effectButton($color){
+    background: $color;
+    box-shadow: 0px 0px 40px $color;
+    border-radius: 8px;
+}
+
+.button{
     font-family: $font-primary;
+    text-transform: uppercase;
+    min-height: 80px;
+}
+
+.content-site{
+    background-image: url("../img/BACKGROUND\ 1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    height: auto;
+}
+
+body{
+    background-color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+section{
+    @include centerContent();
 }
 
 // Navbar >>>
@@ -28,9 +63,9 @@ button{
 }
 .timer{
     font-family: $font-primary;
-    max-width: 384px;
+    max-width: 300px;
     height: 100%;
-    background: #383844;
+    background: $black-color-title;
     color: $bronze-color;
     display: flex;
     font-size: 40px;
@@ -40,6 +75,7 @@ button{
     .time{
         margin: auto 0 auto 0;
         text-align: center;
+        @include centerContent();
         *{
             padding: 0;
             margin: 0;
@@ -61,6 +97,20 @@ button{
 // First section
 .first-section{
     text-align: center;
+    background: linear-gradient(180deg, #FFF8EF 0%, rgba(191, 164, 126, 0) 100%);
+    // background: linear-gradient(180deg, rgba(118, 131, 158, 0) 0%, rgba(1,3,7,0.6) 100%);
+    min-height: 100vh;
+    .first-bg-2{
+        background: linear-gradient(180deg, rgba(1, 3, 7, 0) 0%, rgba(1, 3, 7, 0) 100%);
+        width: 100%;
+    }
+    .first-bg-1{
+        background: url("../img/bg1.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        width: 100%;
+    }
     .first-title{
         font-size: 3em;
         font-weight: 700;
@@ -83,5 +133,181 @@ button{
         font-family: $font-primary;
         font-size: 16px;
         font-weight: 700;
+    }
+}
+.steps{
+    background-color: rgba(1, 3, 7, 0.6);
+    padding: 20px 100px;
+    border-radius: 8px;
+    position: relative;
+    top: 0;
+    .col-3{
+        @include centerContent();
+    }
+    .step{
+        min-height: 240px;
+        padding: 0 20px;
+        @include centerContent();
+        img{
+            margin: 20px 0 20px 0;
+        }
+        h3{
+            font-family: $font-primary;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 110%;
+            text-align: center;
+            color: #AEB8CD;
+        }
+        h2{
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 110%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        p{
+            font-family: $font-secondary;
+            font-size: 16px;
+            line-height: 110%;
+            text-align: center;
+            color: #AEB8CD;
+            margin: 0 0 0 0;
+        }
+    }
+}
+.button-blue{
+    min-width: 592px;
+    padding: 25px 70px;
+    color: white !important;
+    text-transform: uppercase;
+    font-family: $font-primary;
+    position: relative;
+    top: -30px;
+    @include effectButton(#49B0B0);
+}
+
+// Second section
+.second-section{
+    padding: 70px 0 70px 0;
+    background-color: transparent;
+    background-image: none;
+    min-height: 100%;
+    align-items: start;
+    .container{
+        height: auto;
+        @include centerContent();
+        justify-content: start;
+    }
+    .div-second-title{
+        @include centerContent();
+        .second-title{
+            font-family: $font-primary ;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 52px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+    }
+    .info-map{
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: left;
+        color: #FFFFFF;
+        &::before{
+            content: url("../img/Vector (1).png");
+            width: 32px;
+            position: absolute;
+            top: 0;
+            left: -30px;
+        }
+    }
+}
+.div-second-button{
+    top: 0;
+    min-height: 80px;
+    height: auto;
+}
+.button-black{
+    min-width: 592px;
+    padding: 25px 70px;
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 110%;
+    text-align: center;
+    color: $bronze-color;
+    margin: 5rem 0 5rem 0;
+    @include effectButton($bronze-color);
+    background-color: #010307;
+}
+
+// Third section
+.third-section{
+    background: radial-gradient(50% 50% at 50.03% 50%, #52432D 0%, rgba(82, 67, 45, 0) 100%);
+    .content-third-section{
+        background: rgba(198, 159, 82, 0.3);
+        border-radius: 8px;
+    }
+    .bg-third-section{
+        background: url("../img/golden-foil-texture-background-shiny-wrapping-paper-decoration-element\ 2.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 50px;
+        min-height: 1256px;
+        .third-title{
+            font-family: $font-secondary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 80px;
+            text-align: center;
+            letter-spacing: 0.3em;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+        .third-name{
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 110%;
+            text-align: center;
+            color: #010307;
+        }
+        .third-subtitle{
+            font-family: $font-secondary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 150%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .third-text{
+            @extend .third-subtitle;
+            font-weight: 300;
+            font-size: 1em;
+            line-height: 2em;
+        }
+    }
+    .img-third-section{
+        width: 100%;
+        position: relative;
+        top: -32rem;
+        right: 10px;
+        img{
+            width: 105%;
+        }
     }
 }
