@@ -24,22 +24,22 @@ setInterval(() => {
         switch(i){
             case 0:
                 document.querySelector(".day").innerHTML = 
-                    `<h3 class="title-time">${parcela}:</h3>
+                    `<h3 class="title-time">${parcela} :</h3>
                     <span class="legend-time">DIAS</span>`;
                 break;
             case 1:
                 document.querySelector(".hour").innerHTML = 
-                    `<h3 class="title-time">${parcela}:</h3>
+                    `<h3 class="title-time">${parcela} :</h3>
                     <span class="legend-time">HORAS</span>`;
                 break;
             case 2:
                 document.querySelector(".minute").innerHTML = 
-                    `<h3 class="title-time">${parcela}:</h3>
+                    `<h3 class="title-time">${parcela} :</h3>
                     <span class="legend-time">MIN</span>`;
                 break;
             case 3:
                 document.querySelector(".second").innerHTML = 
-                    `<h3 class="title-time">${parcela}</h3>
+                    `<h3 class="title-time">&nbsp;${parcela}</h3>
                     <span class="legend-time">SEG</span>`;
                 break;
         }

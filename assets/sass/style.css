@@ -249,7 +249,7 @@ section {
 }
 
 .second-section {
-  padding: 70px 0 70px 0;
+  padding: 70px;
   background-color: transparent;
   background-image: none;
   min-height: 100%;
@@ -406,11 +406,80 @@ section {
 .third-section .img-third-section {
   width: 100%;
   position: relative;
-  top: -32rem;
-  right: 10px;
+  z-index: 0;
 }
 
 .third-section .img-third-section img {
-  width: 105%;
+  position: relative;
+  top: -38rem;
+  z-index: 0;
+  margin: 0 0 -38rem 0;
+  right: 10px;
+  width: 110%;
+}
+
+.third-section .third-gradient img {
+  width: 100%;
+  position: relative !important;
+  top: -50em !important;
+  margin-bottom: -50rem;
+}
+
+.third-section .row-third-img, .third-section .col-third-img {
+  z-index: 0;
+}
+
+.fourth-section {
+  text-align: center;
+  background-color: black;
+  padding: 70px;
+}
+
+.fourth-section .fourth-content {
+  background-image: url("../img/rocha 1.png");
+  background-size: 100% 100%;
+  border-radius: 8px;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.fourth-section .fourth-content .fourth-title {
+  font-family: "trajan-pro-3";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 100%;
+  text-align: center;
+  color: #C69F52;
+}
+
+.fourth-section .fourth-content .fourth-text {
+  font-family: "trajan-pro-3";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.fourth-section .fourth-content .fourth-subtitle {
+  font-family: "proxima-nova", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.fourth-section .fourth-content .fourth-subtitle .fourth-subtitle-red {
+  color: #C34E45;
+}
+
+.fourth-section .button-bronze {
+  padding: 10px 50px;
+  margin: 2rem 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -191,7 +191,7 @@ section{
 
 // Second section
 .second-section{
-    padding: 70px 0 70px 0;
+    padding: 70px;
     background-color: transparent;
     background-image: none;
     min-height: 100%;
@@ -253,6 +253,7 @@ section{
 }
 
 // Third section
+
 .third-section{
     background: radial-gradient(50% 50% at 50.03% 50%, #52432D 0%, rgba(82, 67, 45, 0) 100%);
     .content-third-section{
@@ -304,10 +305,74 @@ section{
     .img-third-section{
         width: 100%;
         position: relative;
-        top: -32rem;
-        right: 10px;
+        z-index: 0;
         img{
-            width: 105%;
+            position: relative;
+            top: -38rem;
+            z-index: 0;
+            margin: 0 0 -38rem 0;
+            right: 10px;
+            width: 110%;
         }
+    }
+    .third-gradient{
+        img{
+            width: 100%;
+            position: relative !important;
+            top: -50em !important;
+            margin-bottom: -50rem;
+        }
+    }
+    .row-third-img, .col-third-img{
+        z-index: 0;
+    }
+}
+
+// Fourth Section
+.fourth-section{
+    text-align: center;
+    background-color: black;
+    padding: 70px;
+    .fourth-content{
+        background-image: url("../img/rocha\ 1.png");
+        background-size: 100% 100%;
+        border-radius: 8px;
+        padding: 50px;
+        position: relative;
+        z-index: 1;
+        .fourth-title{
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 100%;
+            text-align: center;
+            color: $bronze-color;
+        }
+        .fourth-text{
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 100%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .fourth-subtitle{
+            font-family: $font-secondary;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 110%;
+            text-align: center;
+            color: #FFFFFF;
+            .fourth-subtitle-red{
+                color: #C34E45;
+            }
+        }
+    }
+    .button-bronze{
+        padding: 10px 50px;
+        margin: 2rem 0;
     }
 }
