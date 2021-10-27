@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/tws1qrr.css");
+button {
+  font-family: "trajan-pro-3";
+}
+
+.button-bronze {
+  min-width: 381px;
+  min-height: 54px;
+  text-align: center;
+  background-image: url("../img/botão bronze 1.png");
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.bg-black {
+  background-color: #010307;
+  padding: 0;
+}
+
+.row {
+  width: 100%;
+}
+
+.timer {
+  font-family: "trajan-pro-3";
+  max-width: 384px;
+  height: 100%;
+  background: #383844;
+  color: #C69F52;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.timer .time {
+  margin: auto 0 auto 0;
+  text-align: center;
+}
+
+.timer .time * {
+  padding: 0;
+  margin: 0;
+}
+
+.timer .time .legend-time {
+  color: white;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0 5px;
+}
+
+.timer .time .title-time {
+  line-height: 1;
+  margin: 0;
+}
+
+.first-section {
+  text-align: center;
+}
+
+.first-section .first-title {
+  font-size: 3em;
+  font-weight: 700;
+  font-family: "trajan-pro-3";
+  color: #383844;
+  margin-top: 5rem;
+}
+
+.first-section .insta-text {
+  color: #911D17;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.first-section .insta-text::after {
+  content: url("../svg/Instagram.svg");
+  margin: 10px 0 0 5px;
+}
+
+.first-section .free-text {
+  color: #383844;
+  font-family: "trajan-pro-3";
+  font-size: 16px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

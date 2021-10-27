@@ -1,0 +1,87 @@
+@import url("https://use.typekit.net/tws1qrr.css");
+
+$font-primary: 'trajan-pro-3';
+$font-secondary: 'proxima-nova',sans-serif;
+
+$red-color: #911D17;
+$bronze-color: #C69F52;
+$black-color-title: #383844;
+button{
+    font-family: $font-primary;
+}
+
+// Navbar >>>
+.button-bronze{
+    min-width: 381px;
+    min-height: 54px;
+    text-align: center;
+    background-image: url("../img/botão\ bronze\ 1.png");
+    border-radius: 10px;
+    font-size: 20px;
+}
+.bg-black{
+    background-color: #010307;;
+    padding: 0;
+}
+.row{
+    width: 100%;
+}
+.timer{
+    font-family: $font-primary;
+    max-width: 384px;
+    height: 100%;
+    background: #383844;
+    color: $bronze-color;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    .time{
+        margin: auto 0 auto 0;
+        text-align: center;
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .legend-time{
+            color: white;
+            font-family: $font-secondary;
+            font-size: 12px;
+            font-weight: 300;
+            margin: 0 5px;
+        }
+        .title-time{
+            line-height: 1;
+            margin: 0;
+        }
+    }
+}
+
+// First section
+.first-section{
+    text-align: center;
+    .first-title{
+        font-size: 3em;
+        font-weight: 700;
+        font-family: $font-primary;
+        color: $black-color-title;
+        margin-top: 5rem;
+    }
+    .insta-text{
+        color: $red-color;
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 20px;
+        &::after{
+            content: url('../svg/Instagram.svg');
+            margin: 10px 0 0 5px;
+        }
+    }
+    .free-text{
+        color: $black-color-title;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
