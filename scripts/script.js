@@ -11,8 +11,10 @@ window.onscroll = () => {
     if (windowY == 0) {
         navbar.classList.remove("sticky");
     }
+    console.log(windowY, window.screen.width, windowY >= stickyButton -555);
     // Se a tela for grande
     if(window.screen.width >= 991){
+        buttonFixed.style.display = "none";
         if (windowY >= stickyNavbar) {
             navbar.classList.add("sticky");
             if (windowY >= 4000) {
@@ -28,7 +30,8 @@ window.onscroll = () => {
         }
     // Se a tela for pelo menos média
     } else {
-        if (windowY >= stickyButton -555) {
+        if (windowY >= stickyButton -755) {
+            navbar.classList.add("sticky");
             col.classList.add("col-0");
             buttonFixed.style.display = "flex";
             footer.classList.remove("sticky");
@@ -92,5 +95,3 @@ setInterval(() => {
         }
     });
 }, 1000);
-
-

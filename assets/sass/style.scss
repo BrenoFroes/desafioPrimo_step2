@@ -70,7 +70,7 @@ section{
 .navbar.sticky{
     position: fixed;
     z-index: 999;
-    bottom: -2px;
+    bottom: -5px;
     width: 100%;
 }
 .navbar.reposition-sticky{
@@ -251,6 +251,7 @@ section{
 }
 #button-blue-fixed{
     width: 90%;
+    top: -10px;
     margin: 0 auto;
     @include centerContent();
     display: none;
@@ -444,10 +445,15 @@ section{
     }
     .insta{
         &::before{
-            content: url("../img/Instagram.png");
-            position: relative;
+            background-image: url("../img/Instagram.png");
+            width: 20px;
+            height: 20px;
+            content: '';
             top: 5px;
-            right: 10px;
+            right: 5px;
+            position: relative;
+            display: inline-block;
+            background-size: 20px;
         }
     }
 }
@@ -456,17 +462,22 @@ section{
 .footer{
     background: #272932;
     min-height: 100px;
+    margin: auto;
     @include centerContent();
-    .footer-text{
-        font-family: $font-secondary;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1em;
-        line-height: 145%;
-        text-align: center;
-        letter-spacing: -0.005em;
-        color: #D3D3D3;
+    .hide{
+        display: none;
     }
+}
+.footer-text{
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 145%;
+    text-align: center;
+    letter-spacing: -0.005em;
+    color: #D3D3D3;
+    margin: 0;
 }
 .footer.sticky{
     position: fixed;
