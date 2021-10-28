@@ -4,6 +4,8 @@
   font-family: "trajan-pro-3";
   text-transform: uppercase;
   min-height: 80px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .content-site {
@@ -18,9 +20,13 @@ body {
   background-color: black;
 }
 
-a:hover {
+a, a:not([href]):not([tabindex]) {
+  color: white;
+  cursor: pointer;
+}
+
+a:hover, a:not([href]):not([tabindex]):hover {
   text-decoration: none;
-  color: inherit;
 }
 
 section {
@@ -37,6 +43,41 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.button-bronze-color, .button-black, .button-black:not([href]):not([tabindex]), .button-bronze-color:not([href]):not([tabindex]), .button-black:not([href]):not([tabindex]) {
+  max-width: 592px;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 110%;
+  padding: 25px 70px;
+  font-style: normal;
+  text-align: center;
+  margin: 1rem 0 1rem 0;
+  font-family: "trajan-pro-3";
+  background: #C69F52;
+  -webkit-box-shadow: 0px 0px 40px #C69F52;
+          box-shadow: 0px 0px 40px #C69F52;
+  border-radius: 8px;
+  color: black;
+}
+
+.button-bronze-color:hover, .button-black:hover, .button-black:hover:not([href]):not([tabindex]), .button-bronze-color:not([href]):not([tabindex]):hover, .button-black:not([href]):not([tabindex]):hover {
+  background-color: #010307;
+  color: #C69F52;
+}
+
+.button-black, .button-black:not([href]):not([tabindex]) {
+  background: #C69F52;
+  -webkit-box-shadow: 0px 0px 40px #C69F52;
+          box-shadow: 0px 0px 40px #C69F52;
+  border-radius: 8px;
+  color: black;
+}
+
+.button-black:hover, .button-black:not([href]):not([tabindex]):hover {
+  background-color: black;
+  color: #C69F52;
 }
 
 .bg-black {
@@ -56,13 +97,35 @@ section {
   bottom: 100px;
 }
 
-.button-bronze {
-  min-width: 381px;
+.button-bronze, .button-bronze:not([href]):not([tabindex]) {
+  width: 100%;
+  font-size: 1.25em;
+  max-width: 381px;
   min-height: 54px;
+  font-weight: 700;
+  margin: 2rem auto;
   text-align: center;
-  background-image: url("../img/botão bronze 1.png");
   border-radius: 10px;
-  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #383844;
+  background-image: url("../img/botão bronze 1.png");
+}
+
+.button-bronze:hover, .button-bronze:not([href]):not([tabindex]):hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .row {
@@ -78,7 +141,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 40px;
+  font-size: 2.5em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -114,12 +177,13 @@ section {
 .timer .time .legend-time {
   color: white;
   font-family: "proxima-nova", sans-serif;
-  font-size: 12px;
+  font-size: 0.25em;
   font-weight: 300;
   margin: 0 5px;
 }
 
 .timer .time .title-time {
+  font-size: 0.75em;
   line-height: 1;
   margin: 0;
 }
@@ -139,8 +203,9 @@ section {
 
 .first-section .first-bg-1 {
   background: url("../img/bg1.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-repeat: repeat-x;
   min-height: 100vh;
   width: 100%;
 }
@@ -150,31 +215,43 @@ section {
   font-weight: 700;
   font-family: "trajan-pro-3";
   color: #383844;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  max-width: 1080px;
+}
+
+.first-section .first-title .first-title-black {
+  color: black;
+}
+
+.first-section .first-img {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .first-section .insta-text {
   color: #911D17;
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .first-section .insta-text::after {
   content: url("../svg/Instagram.svg");
-  margin: 10px 0 0 5px;
+  position: relative;
+  top: 2px;
+  left: 5px;
 }
 
 .first-section .free-text {
   color: #383844;
   font-family: "trajan-pro-3";
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
 }
 
 .steps {
   background-color: rgba(1, 3, 7, 0.6);
-  padding: 20px 100px;
+  padding: 30px 100px;
   border-radius: 8px;
   position: relative;
   top: 0;
@@ -212,16 +289,19 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .steps .step img {
-  margin: 20px 0 20px 0;
+  margin: 20px 0;
 }
 
 .steps .step h3 {
   font-family: "trajan-pro-3";
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: 110%;
   text-align: center;
   color: #AEB8CD;
@@ -229,9 +309,8 @@ section {
 
 .steps .step h2 {
   font-family: "trajan-pro-3";
-  font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 110%;
   text-align: center;
   color: #FFFFFF;
@@ -239,39 +318,52 @@ section {
 
 .steps .step p {
   font-family: "proxima-nova", sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 110%;
   text-align: center;
   color: #AEB8CD;
-  margin: 0 0 0 0;
+  margin: 0;
 }
 
-.button-blue {
-  min-width: 592px;
+.button-blue, .button-blue:not([href]):not([tabindex]) {
+  top: -30px;
+  color: white;
+  max-width: 592px;
   padding: 25px 70px;
-  color: white !important;
+  position: relative;
   text-transform: uppercase;
   font-family: "trajan-pro-3";
-  position: relative;
-  top: -30px;
   background: #49B0B0;
   -webkit-box-shadow: 0px 0px 40px #49B0B0;
           box-shadow: 0px 0px 40px #49B0B0;
   border-radius: 8px;
 }
 
+.button-blue:hover, .button-blue:not([href]):not([tabindex]):hover {
+  color: #DD574D;
+  border: 2px solid #911D17;
+  background: #911D17;
+  -webkit-box-shadow: 0px 0px 40px #911D17;
+          box-shadow: 0px 0px 40px #911D17;
+  border-radius: 8px;
+  background-color: black;
+}
+
 .second-section {
   padding: 70px;
-  background-color: transparent;
-  background-image: none;
   min-height: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  background-image: none;
+  background-color: transparent;
 }
 
 .second-section .container {
   height: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,9 +377,10 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+}
+
+.second-section .container .col-second-section {
+  padding: 0 50px;
 }
 
 .second-section .div-second-title {
@@ -307,57 +400,53 @@ section {
 }
 
 .second-section .div-second-title .second-title {
-  font-family: "trajan-pro-3";
-  font-style: normal;
+  margin: 0 auto;
+  font-size: 2.5em;
+  color: #FFFFFF;
+  padding: 0 100px;
   font-weight: bold;
-  font-size: 40px;
   line-height: 52px;
   text-align: center;
-  color: #FFFFFF;
-  margin: 0 auto;
-  padding: 0 100px;
+  font-style: normal;
+  font-family: "trajan-pro-3";
 }
 
 .second-section .info-map {
-  font-family: "proxima-nova", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 150%;
+  font-size: 1.25em;
   text-align: left;
   color: #FFFFFF;
+  font-weight: bold;
+  line-height: 150%;
+  font-style: normal;
+  font-family: "proxima-nova", sans-serif;
 }
 
 .second-section .info-map::before {
   content: url("../img/Vector (1).png");
+  top: 0;
+  left: 0px;
   width: 32px;
   position: absolute;
-  top: 0;
-  left: -30px;
+}
+
+.second-section .free-text {
+  font-size: 1em;
+  font-weight: 700;
+  color: #AEB8CD;
+  color: #383844;
+  font-family: "trajan-pro-3";
 }
 
 .div-second-button {
   top: 0;
-  min-height: 80px;
   height: auto;
+  min-height: 80px;
 }
 
-.button-black {
-  min-width: 592px;
-  padding: 25px 70px;
-  font-family: "trajan-pro-3";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 110%;
-  text-align: center;
-  color: #C69F52;
-  margin: 5rem 0 5rem 0;
-  background: #C69F52;
-  -webkit-box-shadow: 0px 0px 40px #C69F52;
-          box-shadow: 0px 0px 40px #C69F52;
-  border-radius: 8px;
-  background-color: #010307;
+.divisor-1 {
+  max-width: 384px;
+  width: 100%;
+  margin: 5rem auto 2rem auto;
 }
 
 .third-section {
@@ -379,31 +468,30 @@ section {
 
 .third-section .bg-third-section .third-title {
   font-family: "proxima-nova", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
+  font-size: 2em;
   line-height: 80px;
   text-align: center;
   letter-spacing: 0.3em;
   color: #FFFFFF;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .third-section .bg-third-section .third-name {
   font-family: "trajan-pro-3";
-  font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3em;
   line-height: 110%;
   text-align: center;
   color: #010307;
+  margin: 0;
 }
 
 .third-section .bg-third-section .third-subtitle, .third-section .bg-third-section .third-text {
   font-family: "proxima-nova", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 150%;
   text-align: center;
   color: #FFFFFF;
@@ -460,7 +548,7 @@ section {
   font-family: "trajan-pro-3";
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 2.5em;
   line-height: 100%;
   text-align: center;
   color: #C69F52;
@@ -470,7 +558,7 @@ section {
   font-family: "trajan-pro-3";
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 100%;
   text-align: center;
   color: #FFFFFF;
@@ -479,8 +567,8 @@ section {
 .fourth-section .fourth-content .fourth-subtitle {
   font-family: "proxima-nova", sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 500;
+  font-size: 2em;
   line-height: 110%;
   text-align: center;
   color: #FFFFFF;
@@ -495,11 +583,6 @@ section {
   position: relative;
   top: 5px;
   right: 10px;
-}
-
-.fourth-section .button-bronze {
-  padding: 10px 50px;
-  margin: 2rem 0;
 }
 
 .footer {
@@ -524,7 +607,7 @@ section {
   font-family: "proxima-nova", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 145%;
   text-align: center;
   letter-spacing: -0.005em;
