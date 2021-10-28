@@ -45,3 +45,23 @@ setInterval(() => {
         }
     });
 }, 1000);
+
+const sticky = navbar.offsetTop;
+
+window.onscroll = () => {
+    const navbar = document.querySelector("#navbar");
+    const footer = document.querySelector("#footer");
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+    if (window.pageYOffset >= 3950) {
+        footer.classList.add("sticky");
+        navbar.classList.add("reposition-sticky");
+    } else {
+        footer.classList.remove("sticky");
+        navbar.classList.remove("reposition-sticky");
+    }
+};
+
