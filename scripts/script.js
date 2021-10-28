@@ -46,17 +46,23 @@ setInterval(() => {
     });
 }, 1000);
 
-const sticky = navbar.offsetTop;
+window.onload = () =>{
+    const navbar = document.querySelector("#navbar");
+    const button = document.querySelector("#blue-button");
+    const stickyNavbar = navbar.offsetTop;
+    const stickyButton = button.offsetTop;
+}
 
 window.onscroll = () => {
-    const navbar = document.querySelector("#navbar");
-    const footer = document.querySelector("#footer");
-    if (window.pageYOffset >= sticky) {
+    console.log(sticky);
+    if (window.pageYOffset >= stickyNavbar) {
         navbar.classList.add("sticky");
+        button.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
+        navbar.classList.remove("reposition-sticky");
     }
-    if (window.pageYOffset >= 4100) {
+    if (window.pageYOffset >= 4000) {
         footer.classList.add("sticky");
         navbar.classList.add("reposition-sticky");
     } else {

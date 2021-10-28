@@ -1,7 +1,165 @@
-@media (max-width: 992px) { 
-}
-@media (max-width: 768px) { 
-    div > .first-title{
-        font-size: 1.5em;
+@import './global.scss';
+
+@media (max-width: 1349px){
+    .cont-third{
+        .img-third-section{
+            img{
+                top: -32rem;
+                margin-bottom: -32rem;
+            }
+        }
+    }
+    .third-gradient{
+        img{
+            top: -37rem;
+        }
     }
 }
+/* Desktops */
+@media (max-width: 992px) {
+    .container > .first-title{
+        font-size: 1.5em;
+        margin: 0;
+    }
+    .first-logo{
+        display: inherit;
+        margin: 3rem auto;
+    }
+    .row >.col-0{
+        display: none !important;
+    }
+    img{
+        max-width: 100%;
+    }
+
+    .navbar > .container > .row{
+        margin: 0 auto;
+    }
+    .col-12 >.timer{
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        .title-time{
+            font-size: 1em;
+        }
+        .legend-time{
+            font-size: 0.4em;
+        }
+    }
+    .first-bg-1 > .container {
+        .first-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .first-logo {
+            display: inherit;
+            margin: 1rem auto;
+        }
+        .insta-text{
+            font-size: 0.75em;
+        }
+        .free-text{
+            display: none;
+        }
+    }
+    .container > .steps{
+        padding: 20px;
+        .step{
+            min-height: auto;
+            p{
+                margin: 1rem 0;
+            }
+        }
+    }
+    .button-blue, .button-black, .button-bronze-color{
+        padding: 10px 20px !important;
+        font-size: 1em !important;
+        @include centerContent();
+    }
+
+
+    // Second
+    .second-section{
+        padding: 20px;
+    }
+    .div-second-title > .second-title{
+        font-size: 1.5em;
+        max-width: 100%;
+        line-height: 1.1;
+        padding: 0;
+    }
+    .row > .col-second-section{
+        padding: 0 15px 0 15px;
+        .info-map{
+            font-size: 1em;
+            &::before{
+                width: 20px;
+                height: 20px;
+                top: 10px;
+                left: -15px;
+                background-size: 20px;
+            }
+        }
+    }
+    .container > .divisor-1{
+        margin: 2rem auto;
+    }
+
+
+    // Third
+    .bg-third-section{
+        padding: 20px;
+        .third-title, .third-subtitle{
+            font-size: 1.5em;
+        }
+        .third-name{
+            font-size: 2.5em;
+        }
+        .third-text{
+            font-size: 1em;
+        }
+    }
+    .cont-third{
+        .img-third-section{
+            img{
+                top: -45rem;
+                margin-bottom: -45rem;
+            }
+        }
+    }
+    .third-gradient{
+        img{
+            top: -37rem;
+        }
+    }
+    // Fourth
+    .fourth-section{
+        padding: 0;
+    }
+    .fourth-content{
+        padding: 20px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .cont-third{
+        .img-third-section{
+            img{
+                top: -32rem;
+                margin-bottom: -32rem;
+            }
+        }
+    }
+    .third-gradient{
+        img{
+            top: -28rem;
+        }
+    }
+    
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+
+}
+  

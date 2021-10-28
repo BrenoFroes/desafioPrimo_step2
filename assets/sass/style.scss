@@ -1,27 +1,4 @@
-@import url("https://use.typekit.net/tws1qrr.css");
-
-$font-primary: 'trajan-pro-3';
-$font-secondary: 'proxima-nova',sans-serif;
-
-$red-color: #911D17;
-$bronze-color: #C69F52;
-$black-color-title: #383844;
-$black-color-bg: rgba(1, 3, 7, 0);
-$black-color-bg-opacity: rgba(1, 3, 7, 0.6);
-
-@mixin centerContent(){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-@mixin effectButton($color){
-    background: $color;
-    box-shadow: 0px 0px 40px $color;
-    border-radius: 8px;
-}
-
+@import './global.scss';
 
 .button{
     font-family: $font-primary;
@@ -79,6 +56,10 @@ section{
         color: $bronze-color;
     }
 }
+.row{
+    padding: 0;
+    margin: 0;
+}
 
 // Navbar
 .bg-black{
@@ -109,7 +90,7 @@ section{
     background-image: url("../img/botão\ bronze\ 1.png");
     &:hover{
         color: white;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-image: url("../img/botão\ bronze\ 1-effect.png") !important;
     }
 }
 .row{
@@ -165,6 +146,9 @@ section{
         background-repeat: repeat-x;
         min-height: 100vh;
         width: 100%;
+    }
+    .first-logo{
+        display: none;
     }
     .first-title{
         font-size: 3em;
@@ -267,51 +251,55 @@ section{
     align-items: start;
     background-image: none;
     background-color: transparent;
-    .container{
-        height: auto;
-        justify-content: start;
-        @include centerContent();
-        .col-second-section{
-            padding: 0 50px;
-        }
-    }
-    .div-second-title{
-        @include centerContent();
-        .second-title{
-            margin: 0 auto;
-            font-size: 2.5em;
-            color: #FFFFFF;
-            padding: 0 100px;
-            font-weight: bold;
-            line-height: 52px;
-            text-align: center;
-            font-style: normal;
-            font-family: $font-primary ;
-        }
-    }
-    .info-map{
-        font-size: 1.25em;
-        text-align: left;
+}
+.container{
+    height: auto;
+    justify-content: start;
+    @include centerContent();
+}
+.col-second-section{
+    padding: 0 50px;
+}
+.div-second-title{
+    @include centerContent();
+    .second-title{
+        margin: 0 auto;
+        font-size: 2.5em;
         color: #FFFFFF;
+        padding: 0 100px;
         font-weight: bold;
-        line-height: 150%;
+        line-height: 52px;
+        text-align: center;
         font-style: normal;
-        font-family: $font-secondary;
-        &::before{
-            content: url("../img/Vector (1).png");
-            top: 0;
-            left: 0px;
-            width: 32px;
-            position: absolute;
-        }
+        font-family: $font-primary ;
     }
-    .free-text{
-        font-size: 1em;
-        font-weight: 700;
-        color: #AEB8CD;
-        color: $black-color-title;
-        font-family: $font-primary;
+}
+.info-map{
+    font-size: 1.25em;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 150%;
+    font-style: normal;
+    font-family: $font-secondary;
+    &::before{
+        content: '';
+        top: 0;
+        left: 0px;
+        width: 30px; 
+        height: 30px;
+        position: absolute;
+        display: inline-block;
+        background-size: 30px;
+        background-image: url("../img/Vector (1).png");
     }
+}
+.free-text{
+    font-size: 1em;
+    font-weight: 700;
+    color: #AEB8CD;
+    color: $black-color-title;
+    font-family: $font-primary;
 }
 .div-second-button{
     top: 0;
@@ -328,75 +316,75 @@ section{
 // Third section
 .third-section{
     background: radial-gradient(50% 50% at 50.03% 50%, #52432D 0%, rgba(82, 67, 45, 0) 100%);
-    .content-third-section{
-        background: rgba(198, 159, 82, 0.3);
-        border-radius: 8px;
+}
+.content-third-section{
+    background: rgba(198, 159, 82, 0.3);
+    border-radius: 8px;
+}
+.bg-third-section{
+    background: url("../img/golden-foil-texture-background-shiny-wrapping-paper-decoration-element\ 2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 50px;
+    min-height: 137vh
+}
+.third-title{
+    font-family: $font-secondary;
+    font-size: 2em;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 0;
+}
+.third-name{
+    font-family: $font-primary;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 110%;
+    text-align: center;
+    color: #010307;
+    margin: 0;
+}
+.third-subtitle{
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 150%;
+    text-align: center;
+    color: #FFFFFF;
+}
+.third-text{
+    @extend .third-subtitle;
+    font-weight: light;
+    font-size: 1em;
+    line-height: 2em;
+}
+.img-third-section{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    img{
+        position: relative;
+        top: -38rem;
+        z-index: 0;
+        margin: 0 0 -38rem 0;
+        right: 10px;
+        width: 110%;
     }
-    .bg-third-section{
-        background: url("../img/golden-foil-texture-background-shiny-wrapping-paper-decoration-element\ 2.png");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        padding: 50px;
-        min-height: 1256px;
-        .third-title{
-            font-family: $font-secondary;
-            font-size: 2em;
-            line-height: 80px;
-            text-align: center;
-            letter-spacing: 0.3em;
-            color: #FFFFFF;
-            text-transform: uppercase;
-            margin: 0;
-        }
-        .third-name{
-            font-family: $font-primary;
-            font-weight: bold;
-            font-size: 3em;
-            line-height: 110%;
-            text-align: center;
-            color: #010307;
-            margin: 0;
-        }
-        .third-subtitle{
-            font-family: $font-secondary;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1.5em;
-            line-height: 150%;
-            text-align: center;
-            color: #FFFFFF;
-        }
-        .third-text{
-            @extend .third-subtitle;
-            font-weight: 300;
-            font-size: 1em;
-            line-height: 2em;
-        }
-    }
-    .img-third-section{
+}
+.third-gradient{
+    img{
         width: 100%;
         position: relative;
-        z-index: 0;
-        img{
-            position: relative;
-            top: -38rem;
-            z-index: 0;
-            margin: 0 0 -38rem 0;
-            right: 10px;
-            width: 110%;
-        }
+        top: -45em;
+        margin-bottom: -48.3rem;
     }
-    .third-gradient{
-        img{
-            width: 100%;
-            position: relative;
-            top: -45em;
-            margin-bottom: -48.3rem;
-        }
-    }
-    .row-third-img, .col-third-img{
-        z-index: 0;
-    }
+}
+.row-third-img, .col-third-img{
+    z-index: 0;
 }
 
 // Fourth Section
@@ -404,50 +392,50 @@ section{
     text-align: center;
     background-color: black;
     padding: 0 70px 250px 70px;
-    .fourth-content{
-        background-image: url("../img/rocha\ 1.png");
-        background-size: 100% 100%;
-        border-radius: 8px;
-        padding: 50px;
-        position: relative;
-        z-index: 1;
-        .fourth-title{
-            font-family: $font-primary;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 2.5em;
-            line-height: 100%;
-            text-align: center;
-            color: $bronze-color;
+}
+.fourth-content{
+    background-image: url("../img/rocha\ 1.png");
+    background-size: 100% 100%;
+    border-radius: 8px;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    .fourth-title{
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.5em;
+        line-height: 100%;
+        text-align: center;
+        color: $bronze-color;
+    }
+    .fourth-text{
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1em;
+        line-height: 100%;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .fourth-subtitle{
+        font-family: $font-secondary;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2em;
+        line-height: 110%;
+        text-align: center;
+        color: #FFFFFF;
+        .fourth-subtitle-red{
+            color: #C34E45;
         }
-        .fourth-text{
-            font-family: $font-primary;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1em;
-            line-height: 100%;
-            text-align: center;
-            color: #FFFFFF;
-        }
-        .fourth-subtitle{
-            font-family: $font-secondary;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 2em;
-            line-height: 110%;
-            text-align: center;
-            color: #FFFFFF;
-            .fourth-subtitle-red{
-                color: #C34E45;
-            }
-        }
-        .insta{
-            &::before{
-                content: url("../img/Instagram.png");
-                position: relative;
-                top: 5px;
-                right: 10px;
-            }
+    }
+    .insta{
+        &::before{
+            content: url("../img/Instagram.png");
+            position: relative;
+            top: 5px;
+            right: 10px;
         }
     }
 }
