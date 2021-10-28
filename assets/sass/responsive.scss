@@ -1,6 +1,13 @@
 @import './global.scss';
 
 @media (max-width: 1349px){
+    .container {
+        .steps{
+            .step{
+                min-height: 315px;
+            }
+        }
+    }
     .cont-third{
         .img-third-section{
             img{
@@ -17,6 +24,9 @@
 }
 /* Desktops */
 @media (max-width: 992px) {
+    .free-text{
+        display: none;
+    }
     .container > .first-title{
         font-size: 1.5em;
         margin: 0;
@@ -45,6 +55,11 @@
             font-size: 0.4em;
         }
     }
+    .first-section> .container{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
     .first-bg-1 > .container {
         .first-title {
             font-size: 1.5em;
@@ -63,8 +78,9 @@
     }
     .container > .steps{
         padding: 20px;
+        border-radius: 0;
+        background-color: rgba(1, 3, 7, 0);
         .step{
-            min-height: auto;
             p{
                 margin: 1rem 0;
             }
@@ -72,6 +88,7 @@
     }
     .button-blue, .button-black, .button-bronze-color{
         padding: 10px 20px !important;
+        width: 100%;
         font-size: 1em !important;
         @include centerContent();
     }
@@ -108,6 +125,7 @@
     // Third
     .bg-third-section{
         padding: 20px;
+        min-height: 1000px;
         .third-title, .third-subtitle{
             font-size: 1.5em;
         }
@@ -117,36 +135,57 @@
         .third-text{
             font-size: 1em;
         }
-    }
-    .cont-third{
-        .img-third-section{
-            img{
-                top: -45rem;
-                margin-bottom: -45rem;
-            }
-        }
-    }
-    .third-gradient{
-        img{
-            top: -37rem;
-        }
+        
     }
     // Fourth
     .fourth-section{
-        padding: 0;
+        padding: 0 0 10rem 0;
     }
     .fourth-content{
-        padding: 20px;
+        padding: 50px;
+        .fourth-title{
+            font-size: 1.5em;
+        }
+        .fourth-subtitle{
+            font-size: 1em;
+        }
+    }
+
+    // Footer
+    .footer{
+        text-align: center;
+        padding: 2rem 0 8rem 0;
+        p{
+            margin: 2rem auto 0.5rem auto;
+        }
     }
 }
 
 /* Tablets */
 @media (max-width: 768px) {
+    .content-site{
+        background-image: url("../img/BACKGROUND1_mobile1.png");
+        
+    }
+    .button-blue, .button-black, .button-bronze-color{
+        font-size: 0.8em !important;
+    }
+
+    // First
+    .container {
+        .steps{
+            .step{
+                min-height: auto;
+            }
+        }
+    }
+
+    // Third
     .cont-third{
         .img-third-section{
             img{
-                top: -32rem;
-                margin-bottom: -32rem;
+                top: -17rem;
+                margin-bottom: -17rem;
             }
         }
     }
@@ -160,6 +199,13 @@
 
 /* Mobile phones */
 @media (max-width: 576px) {
-
+    // Third
+    .cont-third{
+        .img-third-section{
+            img{
+                top: -17rem;
+                margin-bottom: -17rem;
+            }
+        }
+    }
 }
-  
