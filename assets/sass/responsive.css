@@ -53,7 +53,11 @@
   .col-12 > .timer .legend-time {
     font-size: 0.3em;
   }
-  .first-section > .container {
+  .first-section .first-bg-1 {
+    background-size: 100% 70%;
+    background-position: 0 50%;
+  }
+  .first-section .container {
     padding: 0;
     margin: 0;
     width: 100%;
