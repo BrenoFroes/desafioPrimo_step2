@@ -3,7 +3,7 @@
 .button{
     font-family: $font-primary;
     text-transform: uppercase;
-    min-height: 80px;
+    min-height: 50px;
     transition: all .4s;
 }
 
@@ -12,7 +12,6 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     min-height: 100vh;
-    height: auto;
     backdrop-filter: blur(6px);
 }
 
@@ -31,32 +30,6 @@ section{
     @include centerContent();
 }
 
-.button-bronze-color, .button-bronze-color:not([href]):not([tabindex]) {
-    max-width: 592px;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 110%;
-    padding: 25px 70px;
-    font-style: normal;
-    text-align: center;
-    margin: 1rem 0 1rem 0;
-    font-family: $font-primary;
-    @include effectButton($bronze-color);
-    color: black;
-    &:hover{
-        background-color: #010307;
-        color: $bronze-color;
-    }
-}
-.button-black, .button-black:not([href]):not([tabindex]) {
-    @extend .button-bronze-color;
-    @include effectButton($bronze-color);
-    color: black;
-    &:hover{
-        background-color: black;
-        color: $bronze-color;
-    }
-}
 .row{
     padding: 0;
     margin: 0;
@@ -67,14 +40,18 @@ section{
     background-color: $black-color-bg-opacity;
     padding: 0;
 }
+.navbar{
+    padding: 0;
+    margin: 0;
+}
 .navbar.sticky{
     position: fixed;
     z-index: 999;
-    bottom: -5px;
+    bottom: -1vh;
     width: 100%;
 }
 .navbar.reposition-sticky{
-    bottom: 100px;
+    bottom: 90px;
 }
 .button-bronze, .button-bronze:not([href]):not([tabindex]){
     width: 100%;
@@ -84,17 +61,21 @@ section{
     font-weight: 700;
     margin: 2rem auto;
     text-align: center;
+    border: none;
     border-radius: 10px;
     @include centerContent();
-    color: $black-color-title;
+    @include effectButton($bronze-color);
+    color: black;
     background-image: url("../img/botão\ bronze\ 1.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     &:hover{
         color: white;
+        box-shadow: 0px 0px 30px #cd7f32;
         background-image: url("../img/botão\ bronze\ 1-effect.png") !important;
     }
 }
+
 .row{
     width: 100%;
 }
@@ -137,6 +118,7 @@ section{
     min-height: 90vh;
     text-align: center;
     justify-content: start;
+    
     .first-bg-3{
         width: 100%;
         background: linear-gradient(180deg, #FFF8EF 0%, rgba(191, 164, 126, 0) 100%);
@@ -168,7 +150,7 @@ section{
     }
     .first-img{
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto -14rem auto;
     }
     .insta-text{
         color: $red-color;
@@ -183,7 +165,7 @@ section{
         }
     }
     .free-text{
-        color: $black-color-title;
+        color: #e9eaeb;
         font-family: $font-primary;
         font-size: 1em;
         font-weight: 700;
@@ -191,7 +173,7 @@ section{
 }
 .steps{
     background-color: $black-color-bg-opacity;
-    padding: 30px 100px;
+    padding: 30px 50px;
     border-radius: 8px;
     position: relative;
     top: 0;
@@ -199,12 +181,12 @@ section{
         @include centerContent();
     }
     .step{
-        min-height: 240px;
-        padding: 0 20px;
+        min-height: 200px;
+        padding: 0 10px;
         @include centerContent();
         justify-content: start;
         img{
-            margin: 20px 0;
+            margin: 10px 0 20px 0;
         }
         h3{
             font-family: $font-primary;
@@ -235,12 +217,14 @@ section{
 .button-blue, .button-blue:not([href]):not([tabindex]) {
     top: -60px;
     color: white;
+    margin: 0 auto -60px auto;
     max-width: 592px;
-    padding: 25px 70px;
+    padding: 15px 70px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
     font-family: $font-primary;
+    font-size: 1.25em;
     @include effectButton(#49B0B0);
     &:hover{
         color: #DD574D;
@@ -251,7 +235,7 @@ section{
 }
 #button-blue-fixed{
     width: 90%;
-    top: -10px;
+    top: -25px;
     margin: 0 auto;
     @include centerContent();
     display: none;
@@ -259,7 +243,7 @@ section{
 
 // Second section
 .second-section{
-    padding: 70px;
+    padding: 70px 0;
     min-height: 100%;
     align-items: start;
     background-image: none;
@@ -270,12 +254,17 @@ section{
     justify-content: start;
     @include centerContent();
 }
+.img-second{
+    margin: -4rem 0 5rem 0;
+    z-index: 0;
+}
 .col-second-section{
-    padding: 0 50px;
+    padding: 0 30px;
 }
 .div-second-title{
     @include centerContent();
     .second-title{
+        z-index: 1;
         margin: 0 auto;
         font-size: 2.5em;
         color: #FFFFFF;
@@ -298,7 +287,7 @@ section{
     &::before{
         content: '';
         top: 0;
-        left: 0px;
+        left: -10px;
         width: 30px; 
         height: 30px;
         position: absolute;
@@ -310,8 +299,7 @@ section{
 .free-text{
     font-size: 1em;
     font-weight: 700;
-    color: #AEB8CD;
-    color: $black-color-title;
+    color: #e9eaeb;
     font-family: $font-primary;
 }
 .div-second-button{
@@ -323,9 +311,20 @@ section{
 .divisor-1{
     max-width: 384px;
     width: 100%;
-    margin: 5rem auto 2rem auto;
+    margin: 3rem auto 1rem auto;
 }
 
+.button-black, .button-black:not([href]):not([tabindex]) {
+    @extend .button-bronze;
+    @include effectButton($bronze-color);
+    color: $bronze-color;
+    background-color: black;
+    &:hover{
+        background-color: $bronze-color;;
+        color: black;
+        @include effectButton($bronze-color);
+    }
+}
 // Third section
 .third-section{
     background: radial-gradient(50% 50% at 50.03% 50%, #52432D 0%, rgba(82, 67, 45, 0) 100%);
@@ -338,7 +337,7 @@ section{
     background: url("../img/golden-foil-texture-background-shiny-wrapping-paper-decoration-element\ 2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 50px;
+    padding: 75px;
     min-height: 1256px;
 }
 .third-title{
@@ -368,24 +367,25 @@ section{
     line-height: 150%;
     text-align: center;
     color: #FFFFFF;
+    margin: 1rem 0 0 0;
 }
 .third-text{
     @extend .third-subtitle;
-    font-weight: light;
+    font-weight: normal;
     font-size: 1em;
     line-height: 2em;
 }
 .img-third-section{
     width: 100%;
     position: relative;
-    z-index: 0;
+    z-index: -1;
     img{
         position: relative;
-        top: -38rem;
-        z-index: 0;
-        margin: 0 0 -38rem 0;
+        top: -32rem;
+        z-index: -1;
+        margin: 0 0 -35rem -1rem;
         right: 10px;
-        width: 110%;
+        width: 108%;
     }
 }
 .third-gradient{
@@ -393,7 +393,7 @@ section{
         width: 100%;
         position: relative;
         top: -45em;
-        margin-bottom: -48.3rem;
+        margin-bottom: -48.5rem;
     }
 }
 .row-third-img, .col-third-img{
@@ -405,62 +405,86 @@ section{
     text-align: center;
     background-color: black;
     padding: 0 70px 250px 70px;
+    position: relative;
+    z-index: 0;
 }
 .fourth-content{
     background-image: url("../img/rocha\ 1.png");
     background-size: 100% 100%;
     border-radius: 8px;
-    padding: 50px;
+    padding: 70px;
     position: relative;
-    z-index: 1;
-    .fourth-title{
-        font-family: $font-primary;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 2.5em;
-        line-height: 100%;
-        text-align: center;
-        color: $bronze-color;
-    }
-    .fourth-text{
-        font-family: $font-primary;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1em;
-        line-height: 100%;
-        text-align: center;
-        color: #FFFFFF;
-    }
-    .fourth-subtitle{
-        font-family: $font-secondary;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2em;
-        line-height: 110%;
-        text-align: center;
-        color: #FFFFFF;
-        .fourth-subtitle-red{
-            color: #C34E45;
-        }
-    }
-    .insta{
-        &::before{
-            background-image: url("../img/Instagram.png");
-            width: 20px;
-            height: 20px;
-            content: '';
-            top: 5px;
-            right: 5px;
-            position: relative;
-            display: inline-block;
-            background-size: 20px;
-        }
+    z-index: 10;
+}
+.fourth-title{
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 100%;
+    text-align: center;
+    color: $bronze-color;
+}
+.fourth-text{
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 1rem 0;
+}
+.fourth-subtitle{
+    font-family: $font-secondary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 110%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+    .fourth-subtitle-red{
+        color: #C34E45;
     }
 }
-
+.insta{
+    &::before{
+        background-image: url("../img/Instagram.png");
+        width: 30px;
+        height: 30px;
+        content: '';
+        top: 2px;
+        right: 5px;
+        position: relative;
+        display: inline-block;
+        background-size: 30px;
+    }
+}
+.button-bronze-final, .button-bronze-final:not([href]):not([tabindex]){
+    width: 100%;
+    font-size: 1.25em;
+    min-height: 54px;
+    font-weight: 700;
+    margin: 1rem auto;
+    text-align: center;
+    border-radius: 10px;
+    @include centerContent();
+    @include effectButton($bronze-color);
+    color: black;
+    border: none;
+    background-image: linear-gradient(to right, #BFA47E, #FEE5C3, #BFA47E);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &:hover{
+        color: white;
+        box-shadow: 0px 0px 30px #cd7f32;
+        background-image: linear-gradient(to right, #cd7f32, #e0aa73, #cd7f32);
+    }
+}
 // Footer
 .footer{
-    background: #272932;
+    background: #0F1116;
     min-height: 100px;
     margin: auto;
     @include centerContent();

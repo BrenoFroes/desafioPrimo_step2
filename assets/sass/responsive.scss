@@ -1,10 +1,12 @@
 @import './global.scss';
 
+// Large devices
 @media (max-width: 1349px){
     .container {
         .steps{
             .step{
-                min-height: 315px;
+                min-height: 230px;
+                padding: 0 30px;
             }
         }
     }
@@ -13,8 +15,8 @@
     .cont-third{
         .img-third-section{
             img{
-                top: -32rem;
-                margin-bottom: -32rem;
+                top: -24rem;
+                margin: 0 0 -32rem 0;
             }
         }
     }
@@ -29,6 +31,18 @@
     .free-text{
         display: none;
     }
+    .row >.col-0{
+        display: none !important;
+    }
+    img{
+        max-width: 100%;
+    }
+    .div-button-blue > .button-blue, .button-blue:not([href]):not([tabindex]) {
+        margin: 0 0 3rem 0;
+        top: 0;
+    }
+
+    // First
     .container > .first-title{
         font-size: 1.5em;
         margin: 0;
@@ -37,16 +51,12 @@
         display: inherit;
         margin: 3rem auto;
     }
-    .row >.col-0{
-        display: none !important;
-    }
-    img{
-        max-width: 100%;
-    }
-
-    // First
     .navbar > .container > .row{
         margin: 0 auto;
+    }
+    .first-bg-1 > .container > .first-img{
+        width: 100%;
+        margin: 0 auto -5rem auto;
     }
     .col-12 >.timer{
         max-width: 100%;
@@ -73,7 +83,7 @@
             margin: 1rem auto;
         }
         .insta-text{
-            font-size: 0.7em;
+            font-size: 0.65em;
         }
         .free-text{
             display: none;
@@ -83,6 +93,11 @@
         padding: 20px;
         border-radius: 0;
         background-color: rgba(1, 3, 7, 0);
+        .col-md-3{
+            img{
+                margin: 1rem 0 1rem 0;
+            }
+        }
         .step{
             p{
                 margin: 1rem 0;
@@ -101,11 +116,17 @@
     .second-section{
         padding: 10px;
     }
-    .div-second-title > .second-title{
-        font-size: 1.5em;
-        max-width: 100%;
-        line-height: 1.1;
-        padding: 0;
+    .div-second-title {
+        .second-title{
+            font-size: 1.5em;
+            max-width: 100%;
+            line-height: 1.1;
+            padding: 0;
+        }
+        .img-second{
+            width: 70%;
+            margin: -2rem 0 0 0;
+        }
     }
     .row > .col-second-section{
         padding: 0 5px 0 20px;
@@ -127,7 +148,7 @@
 
     // Third
     .bg-third-section{
-        padding: 20px;
+        padding: 30px;
         min-height: 1000px;
         .third-title, .third-subtitle{
             font-size: 1.5em;
@@ -138,11 +159,24 @@
         .third-text{
             font-size: 1em;
         }
-        
+    }
+    .cont-third{
+        .img-third-section{
+            img{
+                top: -17rem;
+                margin-bottom: -37rem;
+            }
+        }
+    }
+    .third-gradient{
+        img{
+            top: -24rem;
+            min-height: 500px;
+        }
     }
     // Fourth
     .fourth-section{
-        padding: 0 0 10rem 0;
+        padding: 0 0 5rem 0;
     }
     .fourth-content{
         padding: 50px;
@@ -157,7 +191,7 @@
     // Footer
     .footer{
         text-align: center;
-        padding: 2rem 0 8rem 0;
+        padding: 2rem 0 6rem 0;
         .footer-text{
             margin: 1rem auto 1rem auto;
         }
@@ -176,7 +210,7 @@
         background-image: url("../img/BACKGROUND1_mobile1.png");
         
     }
-    .button-blue, .button-black, .button-bronze-color{
+    .button-blue, .button-black, .button-bronze, .button-bronze-final{
         font-size: 0.8em !important;
     }
 
@@ -190,17 +224,18 @@
     }
 
     // Third
+    .third-gradient{
+        img{
+            top: -32rem;
+            min-height: 300px;
+        }
+    }
     .cont-third{
         .img-third-section{
             img{
-                top: -17rem;
-                margin-bottom: -17rem;
+                top: -30rem;
+                margin-bottom: -30rem;
             }
-        }
-    }
-    .third-gradient{
-        img{
-            top: -28rem;
         }
     }
     
@@ -209,11 +244,20 @@
 /* Mobile phones */
 @media (max-width: 576px) {
     // Third
+    .bg-third-section{
+        padding: 20px;
+    }
+    .third-gradient{
+        img{
+            top: -32rem;
+            min-height: 300px;
+        }
+    }
     .cont-third{
         .img-third-section{
             img{
-                top: -17rem;
-                margin-bottom: -17rem;
+                top: -15rem;
+                margin-bottom: -30rem;
             }
         }
     }

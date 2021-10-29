@@ -8,16 +8,14 @@ const stickyButton = button.offsetTop;
 
 window.onscroll = () => {
     let windowY = window.pageYOffset;
-    if (windowY == 0) {
-        navbar.classList.remove("sticky");
-    }
-    console.log(windowY, window.screen.width, windowY >= stickyButton -555);
+    
     // Se a tela for grande
     if(window.screen.width >= 991){
         buttonFixed.style.display = "none";
+        navbar.classList.add("bg-black");
         if (windowY >= stickyNavbar) {
             navbar.classList.add("sticky");
-            if (windowY >= 4000) {
+            if (windowY >= 3800) {
                 footer.classList.add("sticky");
                 navbar.classList.add("reposition-sticky");
             } else {
@@ -30,7 +28,7 @@ window.onscroll = () => {
         }
     // Se a tela for pelo menos média
     } else {
-        if (windowY >= stickyButton -755) {
+        if (windowY >= stickyButton -670) {
             navbar.classList.add("sticky");
             col.classList.add("col-0");
             buttonFixed.style.display = "flex";
@@ -45,7 +43,9 @@ window.onscroll = () => {
             navbar.classList.remove("reposition-sticky");
         }
     }
-    
+    if (windowY == 0) {
+        navbar.classList.remove("sticky");
+    }
     
 };
 
