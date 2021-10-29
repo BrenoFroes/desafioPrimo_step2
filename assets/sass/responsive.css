@@ -181,7 +181,7 @@
 }
 
 /* Tablets */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .content-site {
     background-image: url("../img/BACKGROUND1_mobile1.png");
   }
