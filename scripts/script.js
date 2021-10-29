@@ -28,19 +28,18 @@ window.onscroll = () => {
         }
     // Se a tela for pelo menos média
     } else {
+        navbar.classList.remove("reposition-sticky");
         if (windowY >= stickyButton -670) {
             navbar.classList.add("sticky");
             col.classList.add("col-0");
             buttonFixed.style.display = "flex";
             footer.classList.remove("sticky");
-            navbar.classList.remove("reposition-sticky");
             navbar.classList.remove("bg-black");
     
         } else {
             col.classList.remove("col-0");
             buttonFixed.style.display = "none";
             navbar.classList.add("bg-black");
-            navbar.classList.remove("reposition-sticky");
         }
     }
     if (windowY == 0) {
